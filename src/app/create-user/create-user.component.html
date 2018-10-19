@@ -1,0 +1,41 @@
+
+<div class = "col-md-12">
+  <h1> Crear nuevo usuario </h1>
+  <div *ngIf="!isValid" class="alert alert-danger" role="alert">
+   <strong>{{message}}</strong>
+  </div>
+  <form action="/action_page.php">
+
+    <div class="form-group">
+      <label for="firstName"><span>*</span> Primer nombre:</label>
+      <input type="text" class="form-control" name = "firstName"id="firstName" [(ngModel)]="user.firstName" placeholder="Ingrese su primer nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="secondName">Segundo nombre:</label>
+      <input type="text" class="form-control" name = "secondName" id="secondName"[(ngModel)]="user.secondName" placeholder="Ingrese su segundo nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="firstSurname"><span>*</span>Ingrese su primer apellido:</label>
+      <input type="text" class="form-control" name = "firstSurname" id="firstSurname"[(ngModel)]="user.firstSurname" placeholder="Ingrese su primer apellido">
+    </div>
+
+    <div class="form-group">
+      <label for="secondSurname">Ingrese su segundo apellido:</label>
+      <input type="text" class="form-control" name = "secondSurname" id="secondSurname" [(ngModel)]="user.secondSurname"placeholder="Ingrese su segundo apellido">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Ingrese su telefono:</label>
+      <input type="tel" class="form-control"name = "phone"  id="phone"[(ngModel)]="user.phone" placeholder="Ingrese su telefono">
+    </div>
+
+    <div class="form-group">
+      <label for="address"><span>*</span>Direccion:</label>
+      <input type="text" class="form-control" name = "adress" id="adress"[(ngModel)]="user.adress" placeholder="Ingrese su direccion">
+    </div>
+
+    <button type="submit" (click)="saveOrUpdate()" class="btn btn-default btn-save bg-success">Guardar</button>
+  
+</form></div>

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { UserService } from './user.service'; // ijmport del user service
 import { UserModel } from '../model/user.model';
-import { ConditionalExpr } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-user',

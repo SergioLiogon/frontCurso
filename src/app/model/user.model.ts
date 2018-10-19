@@ -7,6 +7,6 @@ export class UserModel  extends ParentEntity{
     public firstSurname: string;
     public secondSurname: string;
     public phone: string;
-    public address: string;
+    public adress: string;
     
 }
